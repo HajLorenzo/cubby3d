@@ -9,7 +9,6 @@ public class ObjectPool : MonoBehaviour
 
     [SerializeField] private GameObject[] enemyPool;
     private int index;
-
     private void Awake()
     {
         _instance = this;
@@ -18,7 +17,7 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject GetEnemy()
     {
-        while(enemyPool[index].activeSelf)
+        while (enemyPool[index].activeSelf)
         {
             index++;
             if (index == enemyPool.Length)

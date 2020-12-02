@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -596,6 +596,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511508688}
   m_Mesh: {fileID: 3252224991405807402, guid: f937dcf14140510499a3ebfbe6c60a74, type: 3}
+--- !u!1 &512936001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2775696534472845295, guid: 1a9f4b960c338d24da5d9dd758c98318,
+    type: 3}
+  m_PrefabInstance: {fileID: 8573695405356269483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &555785022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,9 +3695,9 @@ MonoBehaviour:
   MoveSpeed: 0.2
   PlayerDes: {fileID: 9161238220118324536, guid: 23e88e1484247d340bd08fb1c1a3d88c,
     type: 3}
-  HitForce: 700
-  HitRadius: 500
-  hitPrt: {fileID: 8573695405356269484}
+  HitForce: 500
+  HitRadius: 100
+  hitPrt: {fileID: 512936001}
   hitPos: {fileID: 2125375876}
 --- !u!23 &1711813855008967568
 MeshRenderer:
@@ -3711,7 +3717,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: f937dcf14140510499a3ebfbe6c60a74, type: 3}
+  - {fileID: 2100000, guid: 2ad40036a1d65ba438c39ab63c0ebc64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3837,11 +3843,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5215447231732837128, guid: 1a9f4b960c338d24da5d9dd758c98318,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ad40036a1d65ba438c39ab63c0ebc64, type: 2}
+    - target: {fileID: 5215447231732837128, guid: 1a9f4b960c338d24da5d9dd758c98318,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ad40036a1d65ba438c39ab63c0ebc64, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a9f4b960c338d24da5d9dd758c98318, type: 3}
---- !u!1 &8573695405356269484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775696534472845295, guid: 1a9f4b960c338d24da5d9dd758c98318,
-    type: 3}
-  m_PrefabInstance: {fileID: 8573695405356269483}
-  m_PrefabAsset: {fileID: 0}

@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
     private void Lose()
     {
         AudioManager.Instance.Play(1);
-        hitPrt.transform.position = transform.position;
+        hitPrt.transform.position = transform.position+new Vector3(0,1f);
         hitPrt.SetActive(true);
         loseGame = true;
         rb.AddExplosionForce(HitForce, hitPos.position, HitRadius);
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     public void Destractive()
     {
         AudioManager.Instance.Play(2);
-        hitPrt.transform.position = transform.position;
+        hitPrt.transform.position = transform.position + new Vector3(0, 1f);
         hitPrt.SetActive(true);
         Instantiate(PlayerDes, transform.position, transform.rotation);
         gameObject.SetActive(false);

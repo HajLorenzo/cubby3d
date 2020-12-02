@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     public void SpawnEnemy()
     {
         GameObject enemy = ObjectPool.Instance.GetEnemy();
-        enemy.transform.position = spawnPos[Random.Range(0, 2)].position;
+        enemy.transform.position = spawnPos[Random.Range(0, spawnPos.Length)].position;
         enemy.SetActive(true);
     }
 }
